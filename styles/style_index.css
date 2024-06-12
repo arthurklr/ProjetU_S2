@@ -1,0 +1,67 @@
+@keyframes fadeInUp {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page {
+  animation: fadeInUp 1s ease-out;
+  min-height: 100vh;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+  padding: 8px;
+}
+
+
+
+/* le block conteneur */
+.marquee-rtl {
+  margin: 1em auto 2em;
+  overflow: hidden;
+  /* masque tout ce qui dépasse */
+}
+
+/* le bloc défilant */
+.marquee-rtl> :first-child {
+  font-size: 50px;
+  display: inline-block;
+  /* modèle de boîte en ligne */
+  padding-right: 2em;
+  /* un peu d'espace pour la transition */
+  padding-left: 100%;
+  /* placement à droite du conteneur */
+  white-space: nowrap;
+  /* pas de passage à la ligne */
+  animation: defilement-rtl 15s infinite linear;
+}
+
+@keyframes defilement-rtl {
+  0% {
+    transform: translate3d(0, 0, 0);
+    /* position initiale à droite */
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+    /* position finale à gauche */
+  }
+}
+
+.wave {
+  overflow: hidden;
+  background-color: #f9f9f9 ;
+  width: 100%;
+}
+
+.page2 {
+  min-height: 100vh;
+  background: url(../img/background/background_blanc.jpg)
+}

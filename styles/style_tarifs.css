@@ -1,0 +1,64 @@
+@keyframes fadeInUp {
+    0%{
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.page {
+    min-height: 100vh;
+    animation: fadeInUp 1s ease-out;
+}
+
+.container {
+    max-width: 500px;
+    margin: 3% auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.price-list,
+.pass-list {
+    list-style: none;
+    padding: 0;
+}
+
+.price-item,
+.pass-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.pass-item:last-child {
+    border-bottom: none;
+}
+
+.price-item .category,
+.pass-item .category {
+    font-weight: bold;
+    flex: 1;
+}
+
+.justification {
+    margin-top: 10px;
+    font-style: italic;
+    flex-basis: 100%;
+    padding-left: 20px;
+}

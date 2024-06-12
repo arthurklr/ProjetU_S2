@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.page1 {
+    height: 100vh;
+}
+
+.accueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulaire {
+    margin: 2% auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.formulaire input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.formulaire input[type="submit"] {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.inscrire {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.inscrire a {
+    color: royalblue;
+    text-decoration: none;
+}
+
+.inscrire a:hover {
+    text-decoration: underline;
+}
+
+.password-strength {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.password-strength-message-red {
+    text-align: center;
+    margin-top: 2%;
+    color: #ff4444;
+}
+
+.password-strength-message-yellow {
+    text-align: center;
+    margin-top: 2%;
+    color: #ffbb33;
+}
+
+.password-strength-message-green {
+    text-align: center;
+    margin-top: 2%;
+    color: #00C851;
+}
+
+.strength-bar {
+    height: 10px;
+    background-color: white;
+}
+
+.strength-bar.weak {
+    background-color: #ff4444;
+}
+
+.strength-bar.medium {
+    background-color: #ffbb33;
+}
+
+.strength-bar.strong {
+    background-color: #00C851;
+}
+
+.password-hint{
+    font-weight: bold;
+}
+
+.obligatoire {
+    text-align: center;
+    color: red;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 2rem;
+    background-color: royalblue;
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input+span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown+span {
+    top: 15px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus+span,
+.form label .input:valid+span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.form label .input:valid+span {
+    color: green;
+}
+
+.form label:nth-of-type(3) .input:focus+span {
+    top: 30px;
+    font-size: 0em;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+}
+
+.submit:hover {
+    background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+
